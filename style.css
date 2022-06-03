@@ -1,0 +1,65 @@
+html {
+    font-size: 10px;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: helvetica,sans-serif;
+    background-color: #dfd3dc;;
+    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+}
+
+.container {
+    background-color: rgb(240 170 105 / 42%);
+    height: 30rem;
+    width: 40rem;
+    margin: auto;
+    border: 2px solid #d65f38;
+    padding: 0px;
+    margin-top: 2rem;
+    border-radius: 5px;
+    
+}
+
+.heading {
+    height: 3rem;
+    width: 40rem;
+    /* background-color: pink; */
+    margin: 0px;
+    
+}
+
+.heading p{
+    font-weight: bold;
+    text-align: center;
+    font-size: large;
+}
+
+#quotes{
+margin: 2rem;
+font-size: medium;
+color: blue;
+}
+
+#author {
+font-size: medium;
+text-align: right;
+padding: 2rem;
+padding-top: 1rem;
+}
+#author::before {
+    content: "--By ";
+}
+
+.btn {
+    margin: 2rem;
+    padding: 0.8rem;
+    border: 1px solid blue;
+    border-radius: 5px;
+    background-color: rgb(215, 89, 219);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(220, 32, 223);
+}
