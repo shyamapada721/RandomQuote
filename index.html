@@ -16,6 +16,7 @@
         <div id="quotes"></div>
         <div id="author"></div>
         <button class ="btn" id="tweetMe">tweet</button>
+        <button class="btn" id="whatsappMe">whatsapp</button>
         <button class ="btn" id="newQ">Get Quotes</button>
     </div>
 
@@ -24,6 +25,7 @@
         const author = document.getElementById("author");
         const newQ = document.getElementById("newQ");
         const tweetMe = document.getElementById("tweetMe");
+        const whatsappMe = document.getElementById("whatsappMe");
         let realData = "";
         let quotesData = "";
 
@@ -32,9 +34,14 @@
             window.open(tweetPost);
         };
 
+        const whatsappNow = () => {
+            let whatsappPost = `https://api.whatsapp.com/send?text=${quotesData.text}`;
+            window.open(whatsappPost);
+        };
         const getNewQuotes = () => {
             let rnum = Math.floor(Math.random() * 1642);
             quotesData = realData[rnum];
+            console.log('The length of the quotes data '+realData.length);
             quotes.innerText = `${quotesData.text}`;
             quotesData.author == null?
             author.innerText = "Unknown"
@@ -51,6 +58,7 @@
             }
         };
         tweetMe.addEventListener("click", tweetNow);
+        whatsappMe.addEventListener("click", whatsappNow);
         newQ.addEventListener("click", getNewQuotes);
         getQuotes();
     </script>
